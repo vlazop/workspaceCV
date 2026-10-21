@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Method Overview}{3}{0}{1}
+\beamer@sectionintoc {2}{Scale and Rotation Invariance}{10}{0}{2}
+\beamer@sectionintoc {3}{Applications}{16}{0}{3}
+\beamer@sectionintoc {4}{Advantages and Limitations}{19}{0}{4}

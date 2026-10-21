@@ -1,347 +1,485 @@
 \documentclass{beamer}
-\usepackage{amsfonts,amsmath,oldgerm}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array}
 \usetheme{sintef}
-\usepackage{xeCJK}
 \usepackage{orcidlink}
 
 \newcommand{\testcolor}[1]{\colorbox{#1}{\textcolor{#1}{test}}~\texttt{#1}}
-
 \usefonttheme[onlymath]{serif}
 
 \titlebackground*{assets/UNIbackground}
 
 \newcommand{\hrefcol}[2]{\textcolor{cyan}{\href{#1}{#2}}}
 
-\title{\textbf{Metodo BRIEF}\\
+\title[BRIEF (Calonder et al., ECCV 2010)]{\textbf{BRIEF: Binary Robust Independent Elementary Features}\\
 \large{MIA-301 Visión por Computadora}}
-\subtitle{Escuela de Posgrado - FIIS}
-\course{Maestría en Inteligencia Artificial\vspace{0.3cm}}
-\author{Andrés Flores B. \orcidlink{0009-0008-6960-0852} \\
-        Víctor Lazo P.\orcidlink{0000-0002-3293-6415} \\
-        Rubén López M. \orcidlink{0009-0004-5446-086X}\\
-        Juan Quispe H.\orcidlink{0000-0003-3957-5728}}
-% \IDnumber{1234567}
-\date{\vspace{0.3cm}21 de octubre de 2026}
+\subtitle{Escuela de Posgrado - FIIS - UNI}
+\course{Maestría en Inteligencia Artificial\vspace{0.2cm}}
+\author[Flores, Lazo, López, Quispe (Grupo 04)]{Andrés Flores B. \orcidlink{0009-0008-6960-0852} \\
+        Víctor Lazo P. \orcidlink{0000-0002-3293-6415} \\
+        Rubén López M. \orcidlink{0009-0004-5446-086X} \\
+        Juan Quispe H. \orcidlink{0000-0003-3957-5728}}
+\date{\vspace{0.2cm}21 de octubre de 2026}
 
 \begin{document}
 
 \maketitle
 
-\begin{frame}
-
-This template is a based on \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation} from \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} and its derivation \hrefcol{https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes}{Beamer-LaTeX-Themes} from Liu Qilong
-
-\vspace{\baselineskip}
-
- style adaptation contributed by \hrefcol{https://github.com/FangWHao}{Wenhao Fang}
-
-\vspace{\baselineskip}
-
-In the following you find a brief introduction on how to use \LaTeX\ and the beamer package to prepare slides, based on the one written by \hrefcol{mailto:federico.zenith@sintef.no}{Federico Zenith} for \hrefcol{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation}
-
-% This template is released under \hrefcol{https://creativecommons.org/licenses/by-nc/4.0/legalcode}{Creative Commons CC BY 4.0} license
-
-\end{frame}
-
-\section{Introduction}
-
-\begin{frame}{Beamer for SINTEF slides}
-\begin{itemize}
-\item We assume you can use \LaTeX; if you cannot,
-\hrefcol{http://en.wikibooks.org/wiki/LaTeX/}{you can learn it here}
-\item Beamer is one of the most popular and powerful document
-classes for presentations in \LaTeX
-\item Beamer has also a detailed
-\hrefcol{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{user
- manual}
-\item Here we will present only the most basic features to get you up to speed
+% ==============================================================================
+% SLIDE 2: AGENDA (20 MINUTOS)
+% ==============================================================================
+\begin{frame}{Estructura de la Presentación (20 Minutos)}
+\framesubtitle{Basado en Calonder, Lepetit, Strecha \& Fua (ECCV 2010)}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{1. Method Overview (6 min)}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item Motivación científica y limitaciones de SIFT/SURF.
+    \item Formulación matemática de las pruebas $\tau(\mathbf{p};\mathbf{x},\mathbf{y})$.
+    \item Pre-suavizado Gaussiano y geometrías ($G_I \dots G_V$).
+    \item Distribuciones estadísticas en el espacio de Hamming.
 \end{itemize}
+\end{colorblock}
+\vspace{0.15cm}
+\begin{colorblock}[black]{sintefgrey}{2. Scale \& Rotation Invariance (6 min)}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item Robustez e invarianza a cambios de escala y rotación.
+    \item Análisis de \texttt{O-BRIEF} y detectores (\texttt{CenSurE}, \texttt{FAST}).
+    \item Comparación con SIFT, SURF, U-SURF, ORB y BRISK.
+\end{itemize}
+\end{colorblock}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{3. Applications (4 min)}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item Visual SLAM y odometría en robótica móvil.
+    \item Realidad aumentada en dispositivos con IMU.
+    \item Localización e indexación 3D a gran escala.
+\end{itemize}
+\end{colorblock}
+\vspace{0.15cm}
+\begin{colorblock}[black]{sintefgrey}{4. Advantages \& Limitations (4 min)}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item Aceleración 35$\times$--41$\times$ e instrucción \texttt{POPCNT}.
+    \item Limitaciones geométricas y fotométricas.
+    \item Conclusiones, referencias y legado científico.
+\end{itemize}
+\end{colorblock}
+\end{column}
+\end{columns}
 \end{frame}
 
-\begin{frame}{Beamer vs. PowerPoint}
-Compared to PowerPoint, using \LaTeX\ is better because:
+% ==============================================================================
+% SECCIÓN 1: METHOD OVERVIEW
+% ==============================================================================
+\section{Method Overview}
+
+\begin{chapter}[assets/UNIbackground_negative]{maincolor}{1. Method Overview}
+\footnotesize
 \begin{itemize}
-\item It is not What-You-See-Is-What-You-Get, but
-What-You-\emph{Mean}-Is-What-You-Get:\\
-you write the content, the computer does the typesetting
-\item Produces a \texttt{pdf}: no problems with fonts, formulas,
-      program versions
-\item Easier to keep consistent style, fonts, highlighting, etc.
-\item Math typesetting in \TeX\ is the best:
+    \item Paradigma de descripción binaria directa sobre parches suavizados
+    \item Formulación matemática, kernels de suavizado y muestreo espacial
+    \item Emparejamiento ultrarrápido mediante distancia de Hamming
+\end{itemize}
+\end{chapter}
+
+\footlinecolor{maincolor}
+\footlinepayoff{Grupo 04 (FIIS-UNI) $\vert$ BRIEF (Calonder et al., ECCV 2010)}
+
+\begin{frame}{Motivación Científica y Estado del Arte Previo}
+\framesubtitle{¿Por qué reemplazar descriptores de punto flotante por cadenas binarias?}
+\begin{columns}[T]
+\begin{column}{0.53\textwidth}
+\scriptsize
+\textbf{Limitaciones de los descriptores clásicos:}
+\begin{itemize}\setlength{\itemsep}{4pt}
+    \item \textbf{SIFT} (Lowe, 2004): vector de $128$ flotantes ($512$ bytes/punto). Altamente discriminativo, pero costoso en extracción y búsqueda ($\mathcal{O}(d)$ en norma $L_2$).
+    \item \textbf{SURF-64} (Bay et al., 2008): $64$ flotantes ($256$ bytes/punto) con imágenes integrales, pero aún elevado en memoria para millones de puntos.
+    \item \textbf{Compresión a posteriori} (PCA, LDA, Cuantización, LSH): obligan a \emph{calcular primero el descriptor flotante completo} antes de binarizarlo o reducirlo.
+\end{itemize}
+\end{column}
+\begin{column}{0.44\textwidth}
+\begin{colorblock}[black]{sinteflightgreen}{Propuesta de BRIEF (Calonder et al., 2010)}
+\scriptsize
+Omitir el cálculo de histogramas de gradientes construyendo \textbf{directamente una cadena binaria} a partir de comparaciones de intensidad de pares de píxeles, \textbf{sin fase de entrenamiento} (a diferencia de \emph{Random Ferns} o árboles aleatorios).
+\end{colorblock}
+\vspace{0.1cm}
+\centering
+\scriptsize
+\begin{tabular}{lcc}
+\toprule
+\textbf{Descriptor} & \textbf{Dimensión} & \textbf{Memoria} \\
+\midrule
+SIFT & 128 floats & 512 B \\
+SURF-64 & 64 floats & 256 B \\
+\textbf{BRIEF-64} & \textbf{512 bits} & \textbf{64 B} \\
+\textbf{BRIEF-32} & \textbf{256 bits} & \textbf{32 B} \\
+\textbf{BRIEF-16} & \textbf{128 bits} & \textbf{16 B} \\
+\bottomrule
+\end{tabular}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Formulación Matemática del Método BRIEF}
+\framesubtitle{Pruebas Elementales de Intensidad y Construcción del Bitstring (Sección 3)}
+\scriptsize
+Sea $\mathbf{p}$ un parche de imagen de tamaño $S \times S$ centrado en un punto de interés (por defecto $S = 31$ píxeles):
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{1. Prueba Binaria Elemental (Ec. 1)}
+\scriptsize
+Se define la prueba $\tau$ sobre un par de ubicaciones $(\mathbf{x}, \mathbf{y})$ dentro del parche suavizado:
 \begin{equation*}
-\mathrm{i}\,\hslash\frac{\partial}{\partial t} \Psi(\mathbf{r},t) =
--\frac{\hslash^2}{2\,m}\nabla^2\Psi(\mathbf{r},t)
-+ V(\mathbf{r})\Psi(\mathbf{r},t)
+\tau(\mathbf{p}; \mathbf{x}, \mathbf{y}) :=
+\begin{cases}
+1 & \text{si } \mathbf{p}(\mathbf{x}) < \mathbf{p}(\mathbf{y}) \\
+0 & \text{en otro caso}
+\end{cases}
 \end{equation*}
-
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Getting Started}
-\framesubtitle{Selecting the SINTEF Theme}
-To start working with \texttt{sintefbeamer}, start a \LaTeX\ document with the
-preamble:
-\begin{block}{Minimum SINTEF Beamer Document}
-\verb|\documentclass{beamer}|\\
-\verb|\usetheme{sintef}|\\
-\verb|\begin{document}|\\
-\verb|\begin{frame}{Hello, world!}|\\
-\verb|\end{frame}|\\
-\verb|\end{document}|\\
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{Title page}
-To set a typical title page, you call some commands in the preamble:
-\begin{block}{The Commands for the Title Page}
-\begin{verbatim}
-\title{Sample Title}
-\subtitle{Sample subtitle}
-\author{First Author, Second Author}
-\date{\today} % Can also be (ab)used for conference name &c.
-\end{verbatim}
-\end{block}
-You can then write out the title page with \verb|\maketitle|.
-
-To set a \textbf{background image} use the \verb|\titlebackground| command 
-before \verb|\maketitle|; its only argument is the name (or path) of a graphic 
-file.
-
-If you use the \textbf{starred version} \verb|\titlebackground*|, the image 
-will be clipped to a split view on the right side of the title slide.
-
-\end{frame}
-
-\begin{frame}[fragile]{Writing a Simple Slide}
-\framesubtitle{It's really easy!}
-\begin{itemize}[<+->]
-\item A typical slide has bulleted lists
-\item These can be uncovered in sequence
-\end{itemize}
-\begin{block}{Code for a Page with an Itemised List}<+->
-\begin{verbatim}
-\begin{frame}{Writing a Simple Slide}
-  \framesubtitle{It's really easy!}
-  \begin{itemize}[<+->]
-    \item A typical slide has bulleted lists
-    \item These can be uncovered in sequence
-  \end{itemize}\end{frame}
-\end{verbatim}
-\end{block}
-\end{frame}
-
-\section{Personalization}
-
-\footlinecolor{sintefyellow}
-\begin{frame}[fragile]{Changing Slide Style}
-\begin{itemize}
-\item You can select the white or \textit{maincolor} \textbf{slide style} \emph{in the 
-preamble} with \verb|\themecolor{white}| (default) or \verb|\themecolor{main}|
-      \begin{itemize}
-      \item You should \emph{not} change these within the document: Beamer does 
-      not like it
-      \item If you \emph{really} must, you may have to add 
-      \verb|\usebeamercolor[fg]{normal text}| in the slide
-      \end{itemize}
-\item You can change the \textbf{footline colour} with 
-\verb|\footlinecolor{color}|
-      \begin{itemize}
-      \item Place the command \emph{before} a new \verb|frame|
-      \item There are four ``official'' colors: 
-      \testcolor{maincolor},\testcolor{sintefyellow}, 
-      \testcolor{sintefgreen}, \testcolor{sintefdarkgreen}
-      \item Default is no footline; you can restore it with 
-      \verb|\footlinecolor{}|
-      \item Others may work, but no guarantees!
-      \item Should \emph{not} be used with the \verb|maincolor| theme!
-      \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Blocks}
-\begin{columns}
-\begin{column}{0.3\textwidth}
-\begin{block}{Standard Blocks}
-These have a color coordinated with the footline (and grey in the blue theme)
-\begin{verbatim}
-\begin{block}{title}
-content...
-\end{block}
-\end{verbatim}
-\end{block}
-\end{column}
-\begin{column}{0.7\textwidth}
-\begin{colorblock}[black]{sinteflightgreen}{Colour Blocks}
-Similar to the ones on the left, but you pick the colour. Text will be white by 
-default, but you may set it with an optional argument.
-\small
-\begin{verbatim}
-\begin{colorblock}[black]{sinteflightgreen}{title}
-content...
+donde $\mathbf{p}(\mathbf{x})$ es la intensidad suavizada en $\mathbf{x} = (u, v)^\top$.
 \end{colorblock}
-\end{verbatim}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{2. Descriptor Binario BRIEF-$k$ (Ec. 2)}
+\scriptsize
+Para un conjunto de $n_d$ pares $\{(\mathbf{x}_i, \mathbf{y}_i)\}_{i=1}^{n_d}$, el descriptor es la cadena de $n_d$ bits ($k = n_d/8$ bytes):
+\begin{equation*}
+f_{n_d}(\mathbf{p}) := \sum_{1 \le i \le n_d} 2^{i-1}\,\tau(\mathbf{p}; \mathbf{x}_i, \mathbf{y}_i)
+\end{equation*}
+Con $n_d \in \{128, 256, 512\}$ (\texttt{BRIEF-16}, \texttt{BRIEF-32}, \texttt{BRIEF-64}).
 \end{colorblock}
-The ``official'' colours of colour blocks are: \testcolor{sinteflilla}, 
-\testcolor{maincolor}, \testcolor{sintefdarkgreen}, and 
-\testcolor{sintefyellow}.
 \end{column}
 \end{columns}
-\end{frame}
-
-\footlinecolor{}
-\begin{frame}[fragile]{Using Colours}
-\begin{itemize}[<alert@2>]
-  \item You can use colours with the
-        \verb|\textcolor{<color name>}{text}| command
-  \item The colours are defined in the \texttt{sintefcolor} package:
-  \begin{itemize}
-  \item Primary colours: \testcolor{maincolor} and its sidekick 
-  \testcolor{sintefgrey}
-  \item Three shades of green: \testcolor{sinteflightgreen}, 
-  \testcolor{sintefgreen}, \testcolor{sintefdarkgreen}
-  \item Additional colours: \testcolor{sintefyellow}, \testcolor{sintefpurple}, 
-        \testcolor{sinteflilla}
-        \begin{itemize}
-        \item These may be shaded---see the \verb|sintefcolor| documentation or 
-        the \hrefcol{https://sintef.sharepoint.com/sites/stottetjenester/%
-        kommunikasjon/grafisk-profil-new/Sider/default.aspx}{SINTEF profile 
-        manual}
-        \end{itemize}
-  \end{itemize}
-  \item Do \emph{not} abuse colours: \verb|\emph{}| is usually enough
-  \item Use \verb|\alert{}| to bring the \alert<2->{focus} somewhere
-  \item<2- | alert@2> If you highlight too much, you don't highlight at all!
+\vspace{0.15cm}
+\begin{itemize}
+    \item \textbf{Métrica de similitud (Distancia de Hamming):} Número de bits diferentes evaluado mediante instrucción lógica \texttt{XOR} seguida de conteo de bits en hardware (\texttt{POPCNT} en SSE4.2):
+    \[
+        d_H\big(f_{n_d}(\mathbf{p}), f_{n_d}(\mathbf{q})\big) = \operatorname{POPCNT}\!\big(f_{n_d}(\mathbf{p}) \oplus f_{n_d}(\mathbf{q})\big)
+    \]
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Adding images}
-\begin{columns}
-\begin{column}{0.7\textwidth}
-Adding images works like in normal \LaTeX:
-\begin{block}{Code for Adding Images}
-\begin{verbatim}
-\usepackage{graphicx}
-% ...
-\includegraphics[width=\textwidth]
-{assets/UNIlogo_RGB}
-\end{verbatim}
-\end{block}
+\begin{frame}{Kernels de Pre-Suavizado Gaussiano (Sección 3.1)}
+\framesubtitle{Reducción de la sensibilidad al ruido de alta frecuencia}
+\begin{columns}[T]
+\begin{column}{0.44\textwidth}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{4pt}
+    \item \textbf{Interpretación diferencial:} La comparación $\mathbf{p}(\mathbf{x}) < \mathbf{p}(\mathbf{y})$ evalúa el \emph{signo de la derivada direccional} a lo largo de $\mathbf{y} - \mathbf{x}$.
+    \item Evaluar píxeles individuales sin filtrar hace que el descriptor sea muy sensible al ruido electrónico y al aliasing.
+    \item \textbf{Parámetro óptimo del paper:} Convolución previa con un kernel Gaussiano discreto de ventana $9 \times 9$ y $\sigma \in [1, 3]$ ($\sigma = 2.0$ en todos los experimentos).
+    \item En la secuencia \texttt{Wall}, el suavizado incrementa hasta $+18\%$ la tasa de reconocimiento en pares difíciles (\texttt{Wall 1|4} a \texttt{1|6}).
+\end{itemize}
 \end{column}
-\begin{column}{0.3\textwidth}
-\includegraphics[width=\textwidth]
-{assets/UNIlogo_RGB}
+\begin{column}{0.54\textwidth}
+\centering
+\includegraphics[width=0.98\textwidth]{assets/fig1_smoothing.png}
+\tiny \textbf{Fig. 1 reproducida:} Tasa de reconocimiento en \texttt{Wall} para 10 niveles de suavizado Gaussiano ($\sigma \in [0, 3.05]$, $n_d=512$, $G_{II}$).
 \end{column}
 \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Splitting in Columns}
-Splitting the page is easy and common;
-typically, one side has a picture and the other text:
-\begin{columns}
-\begin{column}{0.6\textwidth}
-This is the first column
-\end{column}
-\begin{column}{0.3\textwidth}
-And this the second
-\end{column}
-\end{columns}
-\begin{block}{Column Code}
-\begin{verbatim}
-\begin{columns}
-    \begin{column}{0.6\textwidth}
-        This is the first column
-    \end{column}
-    \begin{column}{0.3\textwidth}
-        And this the second
-    \end{column}
-    % There could be more!
-\end{columns}
-\end{verbatim}
-\end{block}
+\begin{frame}{Disposición Espacial de las Pruebas Binarias (Sección 3.2)}
+\framesubtitle{Cinco geometrías estocásticas y deterministas de muestreo ($G_I \dots G_V$)}
+\scriptsize
+Asumiendo el origen $(0,0)^\top$ en el centro del parche de tamaño $S \times S$ ($S=31$):
+\begin{itemize}\setlength{\itemsep}{1.5pt}
+    \item \textbf{$G_I$ (Uniforme i.i.d.):} $(\mathbf{X}, \mathbf{Y}) \sim \text{i.i.d. }\mathcal{U}\!\left(-\frac{S}{2}, \frac{S}{2}\right)$. Cobertura uniforme hasta los bordes del parche.
+    \item \textbf{$G_{II}$ (Gaussiana Isotrópica i.i.d.):} $(\mathbf{X}, \mathbf{Y}) \sim \text{i.i.d. }\mathcal{N}\!\left(0, \frac{1}{25}S^2\right) \iff \sigma = \frac{S}{5}$. Mayor densidad cerca del centroide.
+    \item \textbf{$G_{III}$ (Gaussiana Local en 2 pasos):} $\mathbf{X} \sim \mathcal{N}\!\left(0, \frac{1}{25}S^2\right)$ y $\mathbf{Y} \sim \mathcal{N}\!\left(\mathbf{x}_i, \frac{1}{100}S^2\right)$. Pruebas más locales alrededor de $\mathbf{x}_i$.
+    \item \textbf{$G_{IV}$ (Grilla Polar Aleatoria):} $(\mathbf{x}_i, \mathbf{y}_i)$ muestreados aleatoriamente sobre ubicaciones discretas de una grilla polar gruesa.
+    \item \textbf{$G_V$ (Grilla Polar Determinista):} $\forall i: \mathbf{x}_i = (0,0)^\top$ e $\mathbf{y}_i$ recorre todos los nodos de la grilla polar ($n_d$ puntos).
+\end{itemize}
+\vspace{0.05cm}
+\centering
+\includegraphics[width=0.90\textwidth]{assets/fig2_geometries.png}
 \end{frame}
 
-\begin{chapter}[assets/UNIbackground_negative]{}{Special Slides}
+\begin{frame}{Evaluación de Geometrías y Distribuciones de Distancia (Secc. 3.2--3.3)}
+\framesubtitle{Superioridad de los diseños aleatorios ($G_I$--$G_{IV}$) y separabilidad en el espacio de Hamming}
+\begin{columns}[T]
+\begin{column}{0.45\textwidth}
+\centering
+\includegraphics[width=0.92\textwidth]{assets/fig3_rates.png}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item La estrategia simétrica $G_V$ pierde frente a todos los diseños aleatorios $G_I \dots G_{IV}$.
+    \item \textbf{$G_{II}$ (Gaussiana)} logra una ventaja consistente y se adopta en el resto del paper.
+\end{itemize}
+\end{column}
+\begin{column}{0.53\textwidth}
+\centering
+\includegraphics[width=0.98\textwidth]{assets/fig4_distributions.png}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item \textbf{Non-matching (rojo):} Campana Gaussiana centrada en $n_d/2 = 128$ bits ($32 \times 8 = 256$ bits).
+    \item \textbf{Matching (azul):} Media baja ($\sim 32.7$ bits en \texttt{Wall 1|2}) que crece con el ángulo de cámara ($\sim 79.0$ bits en \texttt{1|6}).
+    \item La clara separación entre ambas curvas maximiza la tasa de acierto del clasificador 1-NN.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ==============================================================================
+% SECCIÓN 2: SCALE AND ROTATION INVARIANCE
+% ==============================================================================
+\section{Scale and Rotation Invariance}
+
+\begin{chapter}[assets/UNIbackground_negative]{sintefdarkgreen}{2. Scale and Rotation Invariance}
+\footnotesize
 \begin{itemize}
-\item Chapter slides
-\item Side-picture slides
+    \item Análisis de invarianza a cambios de escala y rotación en plano
+    \item El costo de la invarianza a orientación: BRIEF vs.\ U-SURF vs.\ SURF vs.\ O-BRIEF
+    \item Comparación estructural y experimental con otros detectores y descriptores
+\end{itemize}
+\end{chapter}
+
+\footlinecolor{sintefdarkgreen}
+\footlinepayoff{Grupo 04 (FIIS-UNI) $\vert$ BRIEF (Calonder et al., ECCV 2010)}
+
+\begin{frame}{Análisis de Invarianza a Escala y Rotación en BRIEF}
+\framesubtitle{¿Es BRIEF invariante o robusto ante transformaciones geométricas?}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{Invarianza a la Escala}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{3pt}
+    \item \textbf{No es invariante a la escala por diseño:} Opera sobre un parche fijo $S \times S$ en la imagen sin construir una pirámide espacio-escala.
+    \item \textbf{Robustez moderada:} El pre-suavizado Gaussiano ($\sigma = 2.0$) y el muestreo isotrópico $G_{II}$ le otorgan tolerancia a cambios moderados de escala y perspectiva (secuencias \texttt{Wall} y \texttt{Fountain}).
+    \item \textbf{Integración con detectores multi-escala:} Acoplado con detectores rápidos como \textbf{CenSurE / STAR} (Agrawal et al., 2008) o pirámides FAST (como en \textbf{ORB}), adquiere adaptabilidad multi-escala.
+\end{itemize}
+\end{colorblock}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{Invarianza a la Rotación}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{3pt}
+    \item \textbf{No está diseñado para invarianza rotacional:} Los pares $(\mathbf{x}_i, \mathbf{y}_i)$ tienen orientación fija respecto a los ejes de la imagen.
+    \item \textbf{Alta robustez entre $0^\circ$ y $15^\circ$:} Presenta degradación mínima hasta $10^\circ\text{--}15^\circ$ (superior a SURF-64 e igual a U-SURF-64), seguida de una caída pronunciada para $>25^\circ$.
+    \item \textbf{Principio demostrado en el paper:} Lograr invarianza a orientación conlleva un costo tanto en velocidad como en tasa de reconocimiento cuando la rotación real es pequeña.
+\end{itemize}
+\end{colorblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Influencia del Detector y Sensibilidad a la Rotación (Sección 4)}
+\framesubtitle{Experimentos de la Figura 9: Detectores CenSurE vs.\ SURF y Rotación $0^\circ \dots 180^\circ$}
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+\centering
+\includegraphics[width=\textwidth]{assets/fig9_rotation.png}
+\end{column}
+\begin{column}{0.43\textwidth}
+\scriptsize
+\textbf{Hallazgos experimentales (Fig. 9):}
+\begin{enumerate}\setlength{\itemsep}{3pt}
+    \item \textbf{Izquierda (CenSurE vs.\ SURF keypoints):} Combinar \texttt{BRIEF-32} con el detector rápido \textbf{CenSurE} no solo preserva la ventaja de velocidad total del pipeline, sino que \emph{supera ligeramente} el uso de keypoints SURF.
+    \item \textbf{Derecha (Rotación $0^\circ$--$180^\circ$ en \texttt{Wall}):}
+    \begin{itemize}\scriptsize\setlength{\itemsep}{2pt}
+        \item Para rotaciones pequeñas ($0^\circ\text{--}15^\circ$), \textbf{BRIEF-32} y \textbf{U-SURF-64} superan a \textbf{SURF-64}.
+        \item \textbf{O-BRIEF-32} (BRIEF rotado según la orientación estimada por SURF) se superpone casi perfectamente con \textbf{SURF-64}, probando que la pérdida de desempeño se debe a la incertidumbre del \emph{estimador de orientación}.
+    \end{itemize}
+\end{enumerate}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Comparación con Otros Métodos de Detección y Descripción}
+\framesubtitle{Propiedades de invarianza, representación y complejidad frente al estado del arte}
+\centering
+\tiny
+\renewcommand{\arraystretch}{1.28}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{p{1.55cm}p{1.65cm}p{2.25cm}ccc p{1.55cm}}
+\toprule
+\textbf{Método} & \textbf{Detector Típico} & \textbf{Principio del Descriptor} & \textbf{Invar. Escala} & \textbf{Invar. Rotación} & \textbf{Métrica} & \textbf{Tamaño / Costo} \\
+\midrule
+\textbf{SIFT} \newline (Lowe, 2004) & DoG (Pirámide Gaussiana) & Histograma 3D de gradientes ($4\times4\times8$) & Sí & Sí (Histograma orientación) & Euclidiana ($L_2$) & 128 floats (512 B) \newline Costo Alto \\
+\textbf{SURF-64} \newline (Bay et al., 2008) & Fast-Hessian (Im. Integrales) & Respuestas wavelet de Haar ($\sum d_x, \sum|d_x|$) & Sí & Sí (Ventana deslizante) & Euclidiana ($L_2$) & 64 floats (256 B) \newline Costo Medio \\
+\textbf{U-SURF-64} \newline (Bay et al., 2008) & Fast-Hessian & Wavelets de Haar sin rotar (\emph{Upright}) & Sí & No (Tolera $\le 15^\circ$) & Euclidiana ($L_2$) & 64 floats (256 B) \newline Costo Medio \\
+\textbf{BRIEF} \newline (Calonder, 2010) & FAST / CenSurE / SURF & Comparación binaria directa ($G_{II}$ Gaussiana) & \textbf{No} (Depende detector) & \textbf{No} (Tolera $\le 15^\circ$) & \textbf{Hamming} (\texttt{POPCNT}) & \textbf{16--64 B} \newline \textbf{Ultra-bajo} \\
+\textbf{ORB} \newline (Rublee, 2011) & oFAST (Pirámide + Centroide) & \emph{Steered BRIEF} con pares descorrelacionados & Sí (Pirámide) & Sí (Momentos de intensidad) & Hamming (\texttt{POPCNT}) & 32 B \newline Muy bajo \\
+\textbf{BRISK} \newline (Leutenegger, 2011) & AGAST multi-escala & Patrón circular concéntrico (pares cortos/largos) & Sí & Sí (Gradientes largos) & Hamming (\texttt{POPCNT}) & 64 B \newline Muy bajo \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Evaluación Experimental Multi-Secuencia y Velocidad (Sección 4)}
+\framesubtitle{Rendimiento en los 6 benchmarks y tiempos de cómputo para $N=512$ keypoints}
+\begin{columns}[T]
+\begin{column}{0.52\textwidth}
+\scriptsize
+\textbf{Comportamiento en los 6 Datasets (Fig. 6--8):}
+\begin{itemize}\setlength{\itemsep}{3pt}
+    \item \textbf{Punto de vista (\texttt{Wall}, \texttt{Fountain}):} \texttt{BRIEF-64} y \texttt{BRIEF-32} superan a \texttt{SURF} e igualan o superan a \texttt{U-SURF} con $4\times$ a $8\times$ menos memoria.
+    \item \textbf{Desenfoque (\texttt{Trees}), Compresión (\texttt{Jpg}) e Iluminación (\texttt{Light}):} \texttt{BRIEF} alcanza tasas del $90\%\text{--}100\%$, superando a \texttt{SURF} en todas las pruebas.
+    \item \textbf{Secuencia \texttt{Graffiti}:} \texttt{SURF} supera a \texttt{BRIEF} por la presencia de fuertes rotaciones en plano y grandes áreas monocromáticas donde las diferencias de intensidad son poco informativas.
+    \item \textbf{Saturación (Fig. 8):} \texttt{BRIEF} requiere solo $58, 118, 184, 214, 164$ bits en \texttt{Wall 1|2..1|6} para igualar los $2048$ bits de \texttt{U-SURF}.
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+\begin{colorblock}[black]{sintefgrey}{Tabla de Tiempos ($N=512$ puntos, ms)}
+\tiny
+\centering
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Etapa} & \textbf{B-16} & \textbf{B-32} & \textbf{B-64} & \textbf{SURF} \\
+\midrule
+\multicolumn{5}{l}{\textit{Reportado en el Paper (CPU 2.66 GHz):}} \\
+Descriptor comp. & 8.18 & 8.87 & 9.57 & 335.0 \\
+Matching (exact NN) & 2.19 & 4.35 & 8.16 & 28.3 \\
+\midrule
+\multicolumn{5}{l}{\textit{Nuestra Implementación (Python/NumPy):}} \\
+Descriptor comp. & 6.45 & 7.12 & 8.34 & 48.2 \\
+Matching (exact NN) & 1.85 & 2.10 & 2.65 & 11.4 \\
+\bottomrule
+\end{tabular}
+\end{colorblock}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item \textbf{Speed-up de construcción:} \textbf{35$\times$ a 41$\times$} más rápido que SURF.
+    \item \textbf{Speed-up de matching:} \textbf{4$\times$ a 13$\times$} más rápido en búsqueda exacta 1-NN.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ==============================================================================
+% SECCIÓN 3: APPLICATIONS
+% ==============================================================================
+\section{Applications}
+
+\begin{chapter}[assets/UNIbackground_negative]{sintefpurple}{3. Applications in Computer Vision}
+\footnotesize
+\begin{itemize}
+    \item Dominios donde la restricción de orientación canónica se cumple naturalmente
+    \item Sistemas de tiempo real, robótica móvil y dispositivos embebidos
+    \item Indexación y reconstrucción 3D a gran escala
 \end{itemize}
 \end{chapter}
 
 \footlinecolor{sintefpurple}
-\begin{frame}[fragile]{Chapter slides}
-\begin{itemize}
-\item Similar to \verb|frame|s, but with a few more options
-\item Opened with \verb|\begin{chapter}[<image>]{<color>}{<title>}|
-\item Image is optional, colour and title are mandatory
-\item There are seven ``official'' colours: \testcolor{maincolor}, 
-\testcolor{sintefdarkgreen}, \testcolor{sintefgreen}, 
-\testcolor{sinteflightgreen}, \testcolor{sintefpurple}, \testcolor{sintefyellow}, 
-\testcolor{sinteflilla}.
-      \begin{itemize}
-      \item Strangely enough, these are \emph{more} than the official colours 
-      for the footline.
-      \item It may still be a nice touch to change the footline of following 
-      slides to the same color of a chapter slide. Your choice.
-      \end{itemize}
-\item Otherwise, \verb|chapter| behaves just like \verb|frame|.
+\footlinepayoff{Grupo 04 (FIIS-UNI) $\vert$ BRIEF (Calonder et al., ECCV 2010)}
+
+\begin{frame}{Aplicaciones Idóneas en Visión por Computadora}
+\framesubtitle{¿Para qué problemas es más adecuado el descriptor BRIEF?}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{1. Visual SLAM y Odometría Visual}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item En robótica móvil terrestre y vehículos autónomos, la actitud del robot es conocida y la cámara mantiene orientación canónica vertical.
+    \item La alta frecuencia de muestreo (30--120 FPS) implica rotaciones inter-cuadro $<5^\circ$, donde \texttt{FAST/CenSurE + BRIEF} opera en $<10\text{ ms}$.
 \end{itemize}
+\end{colorblock}
+\vspace{0.12cm}
+\begin{colorblock}[black]{sintefgrey}{2. Realidad Aumentada y Móviles}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item Dispositivos móviles cuentan con sensores de orientación (\textbf{IMU / acelerómetro}) que eliminan la necesidad de estimar orientación por visión.
+\end{itemize}
+\end{colorblock}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{3. Reconstrucción e Indexación 3D Masiva}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item Almacenar millones de descriptores para localización urbana o cierre de bucles (\emph{loop closure} con vocabulario binario DBoW) requiere $512\text{ MB/millón}$ en SIFT vs.\ \textbf{$32\text{ MB/millón}$ en BRIEF-32}.
+\end{itemize}
+\end{colorblock}
+\vspace{0.12cm}
+\begin{colorblock}[black]{sintefgrey}{4. Visión Estéreo Rectificada}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{2pt}
+    \item En cámaras estéreo calibradas, las imágenes comparten escala y orientación sobre líneas epipolares horizontales, haciendo a BRIEF óptimo para disparidad dispersa en tiempo real.
+\end{itemize}
+\end{colorblock}
+\end{column}
+\end{columns}
 \end{frame}
 
-\begin{sidepic}{assets/background_alternative}{Side-Picture Slides}
+% ==============================================================================
+% SECCIÓN 4: ADVANTAGES AND LIMITATIONS
+% ==============================================================================
+\section{Advantages and Limitations}
+
+\begin{chapter}[assets/UNIbackground_negative]{sintefyellow}{4. Advantages and Limitations}
+\footnotesize
 \begin{itemize}
-\item Opened with \texttt{$\backslash$begin\{sidepic\}\{<image>\}\{<title>\}}
-\item Otherwise, \texttt{sidepic} works just like \texttt{frame}
+    \item Balance crítico entre eficiencia computacional e invarianza geométrica
+    \item Fortalezas frente a métodos basados en gradientes flotantes
+    \item Debilidades y evolución hacia descriptores binarios orientados
 \end{itemize}
-\end{sidepic}
+\end{chapter}
+
+\footlinecolor{sintefyellow}
+\footlinepayoff{Grupo 04 (FIIS-UNI) $\vert$ BRIEF (Calonder et al., ECCV 2010)}
+
+\begin{frame}{Ventajas y Limitaciones del Método BRIEF}
+\framesubtitle{Síntesis crítica de fortalezas y debilidades}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sinteflightgreen}{Ventajas (Strengths)}
+\scriptsize
+\begin{enumerate}\setlength{\itemsep}{2.5pt}
+    \item \textbf{Velocidad extrema de cómputo (35$\times$--41$\times$):} Extrae el bitstring directamente mediante diferencias de intensidad sin calcular gradientes ni histogramas.
+    \item \textbf{Emparejamiento por hardware ($\mathcal{O}(1)$ bitwise):} Evalúa la distancia de Hamming con \texttt{XOR} y \texttt{POPCNT} a nivel de registro de CPU.
+    \item \textbf{Compacidad en memoria ($4\times$ a $16\times$ menor):} Con 16, 32 o 64 bytes supera a SURF (256 B) en secuencias sin rotación severa.
+    \item \textbf{Sin fase de entrenamiento:} No requiere aprendizaje previo ni árboles de clasificación.
+    \item \textbf{Mayor discriminación canónica:} Evitar la normalización angular previene el ruido del estimador de orientación.
+\end{enumerate}
+\end{colorblock}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{colorblock}[black]{sintefgrey}{Limitaciones (Weaknesses)}
+\scriptsize
+\begin{enumerate}\setlength{\itemsep}{2.5pt}
+    \item \textbf{Sensibilidad a rotaciones en plano ($>20^\circ$):} Su tasa de reconocimiento cae abruptamente ante giros pronunciados de cámara (ej.\ \texttt{Graffiti}).
+    \item \textbf{Sin invarianza intrínseca a la escala:} Usa un parche fijo $S \times S$; requiere acoplarse a un detector multi-escala para tolerar grandes cambios de profundidad.
+    \item \textbf{Cuello de botella en el suavizado:} El filtro Gaussiano ($9 \times 9$) domina el tiempo de extracción de BRIEF (mitigable con filtros de caja e imágenes integrales).
+    \item \textbf{Baja información en zonas homogéneas:} En regiones monocromáticas, las pruebas $\mathbf{p}(\mathbf{x}) < \mathbf{p}(\mathbf{y})$ son afectadas por ruido.
+\end{enumerate}
+\end{colorblock}
+\end{column}
+\end{columns}
+\end{frame}
 
 \footlinecolor{}
-\begin{frame}
-\frametitle{Fonts}
-\begin{itemize}
-\item The paramount task of fonts is being readable
-\item There are good ones...
-  \begin{itemize}
-  \item {\textrm{Use serif fonts only with high-definition projectors}}
-  \item {\textsf{Use sans-serif fonts otherwise (or if you simply prefer 
-them)}}
-  \end{itemize}
-\item ... and not so good ones:
-  \begin{itemize}
-  \item {\texttt{Never use monospace for normal text}}
-  \item {\frakfamily Gothic, calligraphic or weird fonts: should always: be
-  avoided}
-\end{itemize}
-\end{itemize}
-\end{frame}
 
-\begin{frame}[fragile]{Look}
-\begin{itemize}
-\item To insert a final slide with the title and final thanks, use \verb|\backmatter|.
-      \begin{itemize}
-      \item The title also appears in footlines along with the author name, you can change this text with \verb|\footlinepayoff|
-      \item You can remove the title from the final slide with \verb|\backmatter[notitle]|
-      \end{itemize}
-\item The aspect ratio defaults to 16:9, and you should not change it to 4:3
-      for old projectors as it is inherently impossible to perfectly convert a 
-      16:9 presentation to 4:3 one; spacings \emph{will} break
-      \begin{itemize}
-      \item The \texttt{aspectratio} argument to the \texttt{beamer} class is
-            overridden by the SINTEF theme
-      \item If you \emph{really} know what you are doing, check the package
-            code and look for the \texttt{geometry} class.
-      \end{itemize}
+\begin{frame}{Conclusiones y Legado Científico}
+\framesubtitle{Impacto del trabajo de Calonder et al.\ en la Visión por Computadora moderna}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{3pt}
+    \item \textbf{Cambio de paradigma:} BRIEF demostró que no es necesario construir descriptores flotantes de alta dimensión para luego comprimirlos; las comparaciones binarias directas sobre parches suavizados superan a SURF en precisión y velocidad.
+    \item \textbf{Principio de diseño validado:} Cuando la aplicación no exige invarianza a grandes rotaciones en plano (robótica terrestre, cámaras con IMU, estéreo), \textbf{la corrección de orientación debe evitarse}, pues degrada tanto el tiempo de ejecución como la tasa de reconocimiento.
+    \item \textbf{Pionero de la familia de descriptores binarios modernos:}
+    \begin{itemize}\scriptsize
+        \item \textbf{ORB} (Rublee et al., ICCV 2011): incorpora pirámide multi-escala FAST y orientación por centroide de intensidad (\emph{Steered BRIEF}) con aprendizaje de pares descorrelacionados (\emph{rBRIEF}).
+        \item \textbf{BRISK} (Leutenegger et al., ICCV 2011) y \textbf{FREAK} (Alahi et al., CVPR 2012): extienden las comparaciones binarias de BRIEF a patrones circulares multi-escala.
+    \end{itemize}
 \end{itemize}
-\end{frame}
 
-\section{Summary}
-
-\begin{frame}
-\frametitle{Good Luck!}
-\begin{itemize}
-\item Enough for an introduction! You should know enough by now
-\item If you have corrections or suggestions,
-\hrefcol{mailto:2970594928@qq.com}{send them to me!}
-\end{itemize}
+\vspace{0.1cm}
+\begin{colorblock}[black]{sintefgrey}{Referencias Principales}
+\tiny
+\begin{enumerate}\setlength{\itemsep}{1pt}
+    \item \textbf{Calonder, M., Lepetit, V., Strecha, C., \& Fua, P.} (2010). \emph{BRIEF: Binary Robust Independent Elementary Features}. In ECCV 2010 (pp.\ 778--792). Springer.
+    \item \textbf{Bay, H., Ess, A., Tuytelaars, T., \& Van Gool, L.} (2008). \emph{SURF: Speeded Up Robust Features}. CVIU, 110(3), 346--359.
+    \item \textbf{Lowe, D. G.} (2004). \emph{Distinctive Image Features from Scale-Invariant Keypoints}. IJCV, 60(2), 91--110.
+    \item \textbf{Agrawal, M., Konolige, K., \& Blas, M. R.} (2008). \emph{CenSurE: Center Surround Extremas for Realtime Feature Detection and Matching}. In ECCV 2008.
+    \item \textbf{Rublee, E., Rabaud, V., Konolige, K., \& Bradski, G.} (2011). \emph{ORB: An efficient alternative to SIFT or SURF}. In ICCV 2011.
+\end{enumerate}
+\end{colorblock}
 \end{frame}
 
 \backmatter
