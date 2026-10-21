@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.20)  20 OCT 2026 21:02
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.20)  21 OCT 2026 18:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -766,39 +766,103 @@ default.sty
 )
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beameroutertheme
 default.sty)))
+(C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/10/15 v26.14 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count359
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2118.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2120.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2122.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2123.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2124.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2126.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2151.
+\U@D=\dimen304
+\l@unhyphenated=\language79
+
+(C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/babel\xebabel.def)
+\bbl@readstream=\read3
+LaTeX Info: Redefining \textlatin on input line 4112.
+\bbl@dirlevel=\count360
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4366.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
+-spanish.tex)
+Package babel Info: Importing font and identification data for 'spanish'
+(babel)             from babel-es.ini. Reported on input line 4494.
+
+(C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
+df
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks48
+\es@quotdepth=\count361
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
+on input line 4.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
+ on input line 4.
+
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen304
-\lightrulewidth=\dimen305
-\cmidrulewidth=\dimen306
-\belowrulesep=\dimen307
-\belowbottomsep=\dimen308
-\aboverulesep=\dimen309
-\abovetopsep=\dimen310
-\cmidrulesep=\dimen311
-\cmidrulekern=\dimen312
-\defaultaddspace=\dimen313
-\@cmidla=\count359
-\@cmidlb=\count360
-\@aboverulesep=\dimen314
-\@belowrulesep=\dimen315
-\@thisruleclass=\count361
-\@lastruleclass=\count362
-\@thisrulewidth=\dimen316
+\heavyrulewidth=\dimen305
+\lightrulewidth=\dimen306
+\cmidrulewidth=\dimen307
+\belowrulesep=\dimen308
+\belowbottomsep=\dimen309
+\aboverulesep=\dimen310
+\abovetopsep=\dimen311
+\cmidrulesep=\dimen312
+\cmidrulekern=\dimen313
+\defaultaddspace=\dimen314
+\@cmidla=\count362
+\@cmidlb=\count363
+\@aboverulesep=\dimen315
+\@belowrulesep=\dimen316
+\@thisruleclass=\count364
+\@lastruleclass=\count365
+\@thisrulewidth=\dimen317
 )
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip67
-\multirow@cntb=\count363
+\multirow@cntb=\count366
 \multirow@dima=\skip68
-\bigstrutjot=\dimen317
+\bigstrutjot=\dimen318
 )
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
-\col@sep=\dimen318
+\col@sep=\dimen319
 \ar@mcellbox=\box79
-\extrarowheight=\dimen319
-\NC@list=\toks46
+\extrarowheight=\dimen320
+\NC@list=\toks49
 \extratabsurround=\skip69
 \backup@length=\skip70
 \ar@cellbox=\box80
@@ -823,8 +887,8 @@ File: pgfmoduleplot.code.tex 2026-08-01 v3.1.12 (3.1.12)
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2026-08-01 v3.1.12 (3.1.12)
-\pgf@nodesepstart=\dimen320
-\pgf@nodesepend=\dimen321
+\pgf@nodesepstart=\dimen321
+\pgf@nodesepend=\dimen322
 )
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -835,10 +899,10 @@ y
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
 code.tex
 Package: pgffor 2026-08-01 v3.1.12 (3.1.12)
-\pgffor@iter=\dimen322
-\pgffor@skip=\dimen323
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@iter=\dimen323
+\pgffor@skip=\dimen324
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
 ))
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -847,34 +911,34 @@ Package: tikz 2026-08-01 v3.1.12 (3.1.12)
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgf@plot@mark@count=\count364
-\pgfplotmarksize=\dimen324
+\pgf@plot@mark@count=\count367
+\pgfplotmarksize=\dimen325
 )
-\tikz@lastx=\dimen325
-\tikz@lasty=\dimen326
-\tikz@lastxsaved=\dimen327
-\tikz@lastysaved=\dimen328
-\tikz@lastmovetox=\dimen329
-\tikz@lastmovetoy=\dimen330
-\tikzleveldistance=\dimen331
-\tikzsiblingdistance=\dimen332
+\tikz@lastx=\dimen326
+\tikz@lasty=\dimen327
+\tikz@lastxsaved=\dimen328
+\tikz@lastysaved=\dimen329
+\tikz@lastmovetox=\dimen330
+\tikz@lastmovetoy=\dimen331
+\tikzleveldistance=\dimen332
+\tikzsiblingdistance=\dimen333
 \tikz@figbox=\box82
 \tikz@figbox@bg=\box83
 \tikz@tempbox=\box84
 \tikz@tempbox@bg=\box85
-\tikztreelevel=\count365
-\tikznumberofchildren=\count366
-\tikznumberofcurrentchild=\count367
-\tikz@fig@count=\count368
+\tikztreelevel=\count368
+\tikznumberofchildren=\count369
+\tikznumberofcurrentchild=\count370
+\tikz@fig@count=\count371
 
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgfmatrixcurrentrow=\count369
-\pgfmatrixcurrentcolumn=\count370
-\pgf@matrix@numberofcolumns=\count371
+\pgfmatrixcurrentrow=\count372
+\pgfmatrixcurrentcolumn=\count373
+\pgf@matrix@numberofcolumns=\count374
 )
-\tikz@expandcount=\count372
+\tikz@expandcount=\count375
 
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -895,10 +959,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks49
-\XKV@tempa@toks=\toks50
+\XKV@toks=\toks52
+\XKV@tempa@toks=\toks53
 )
-\XKV@depth=\count373
+\XKV@depth=\count376
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
@@ -910,20 +974,20 @@ Package: fontspec 2026/08/11 v2.9h Font selection for XeLaTeX and LuaLaTeX
 .sty
 Package: fontspec-xetex 2026/08/11 v2.9h Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count374
-\l__fontspec_language_int=\count375
-\l__fontspec_strnum_int=\count376
-\l__fontspec_tmp_int=\count377
-\l__fontspec_tmpa_int=\count378
-\l__fontspec_tmpb_int=\count379
-\l__fontspec_tmpc_int=\count380
-\l__fontspec_em_int=\count381
-\l__fontspec_emdef_int=\count382
-\l__fontspec_strong_int=\count383
-\l__fontspec_strongdef_int=\count384
-\l__fontspec_tmpa_dim=\dimen333
-\l__fontspec_tmpb_dim=\dimen334
-\l__fontspec_tmpc_dim=\dimen335
+\l__fontspec_script_int=\count377
+\l__fontspec_language_int=\count378
+\l__fontspec_strnum_int=\count379
+\l__fontspec_tmp_int=\count380
+\l__fontspec_tmpa_int=\count381
+\l__fontspec_tmpb_int=\count382
+\l__fontspec_tmpc_int=\count383
+\l__fontspec_em_int=\count384
+\l__fontspec_emdef_int=\count385
+\l__fontspec_strong_int=\count386
+\l__fontspec_strongdef_int=\count387
+\l__fontspec_tmpa_dim=\dimen334
+\l__fontspec_tmpb_dim=\dimen335
+\l__fontspec_tmpc_dim=\dimen336
  (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 )
@@ -1304,63 +1368,55 @@ File: pgflibrarysvg.path.code.tex 2026-08-01 v3.1.12 (3.1.12)
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 parser.code.tex
 File: pgfmoduleparser.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgfparserdef@arg@count=\count385
+\pgfparserdef@arg@count=\count388
 )
-\pgf@lib@svg@subpath@initial@x=\dimen336
-\pgf@lib@svg@subpath@initial@y=\dimen337
-\pgf@lib@svg@last@x=\dimen338
-\pgf@lib@svg@last@y=\dimen339
-\pgf@lib@svg@last@c@x=\dimen340
-\pgf@lib@svg@last@c@y=\dimen341
-\pgf@lib@svg@count=\count386
-\pgf@lib@svg@max@num=\count387
+\pgf@lib@svg@subpath@initial@x=\dimen337
+\pgf@lib@svg@subpath@initial@y=\dimen338
+\pgf@lib@svg@last@x=\dimen339
+\pgf@lib@svg@last@y=\dimen340
+\pgf@lib@svg@last@c@x=\dimen341
+\pgf@lib@svg@last@c@y=\dimen342
+\pgf@lib@svg@count=\count389
+\pgf@lib@svg@max@num=\count390
 ))
 \@curXheight=\skip71
 )
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfontthemes
 erif.sty)
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 24.
-
-
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-xete
 x.def
 File: l3backend-xetex.def 2026-09-09 L3 backend support: XeTeX
-\g__graphics_track_int=\count388
-\g__pdfannot_backend_int=\count389
-\g__pdfannot_backend_link_int=\count390
-) (main.aux)
+\g__graphics_track_int=\count391
+\g__pdfannot_backend_int=\count392
+\g__pdfannot_backend_link_int=\count393
+) (main.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 11.
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1396,7 +1452,7 @@ LaTeX Font Info:    ... okay on input line 27.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 32.
 (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1404,46 +1460,46 @@ Package hyperref Info: Link coloring OFF on input line 27.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Caladea(0)/m/n on input line 27.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 27.
+(Font)                  OT1/cmr/m/n --> TU/Caladea(0)/m/n on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Caladea(0)/b/n on input line 27.
+(Font)                  OT1/cmr/bx/n --> TU/Caladea(0)/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Caladea(0)/b/n on input line 27.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 27.
+(Font)                  OT1/cmr/bx/n --> TU/Caladea(0)/b/n on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Carlito(0)/m/n on input line 27.
+(Font)                  OT1/cmss/m/n --> TU/Carlito(0)/m/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Carlito(0)/m/n on input line 27.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 27.
+(Font)                  OT1/cmss/bx/n --> TU/Carlito(0)/m/n on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Caladea(0)/m/it on input line 27.
+(Font)                  OT1/cmr/m/it --> TU/Caladea(0)/m/it on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Caladea(0)/m/it on input line 27.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 27.
+(Font)                  OT1/cmr/bx/it --> TU/Caladea(0)/m/it on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 27.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 27.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/Caladea(0)/m/n --> TU/Caladea(0)/b/n on input line 2
-7.
+(Font)                  TU/Caladea(0)/m/n --> TU/Caladea(0)/b/n on input line 3
+2.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  TU/Caladea(0)/m/it --> TU/Caladea(0)/b/it on input line
- 27.
+ 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Caladea(0)/b/n on input line 27.
+(Font)                  OT1/cmr/bx/n --> TU/Caladea(0)/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/Caladea(0)/b/n --> TU/Caladea(0)/b/n on input line 2
-7.
+(Font)                  TU/Caladea(0)/b/n --> TU/Caladea(0)/b/n on input line 3
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/Carlito(0)/m/n --> TU/Carlito(0)/b/n on input line 2
-7.
+(Font)                  TU/Carlito(0)/m/n --> TU/Carlito(0)/b/n on input line 3
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/Caladea(0)/m/it --> TU/Caladea(0)/b/it on input line
- 27.
+ 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 27.
+(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 32.
 
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-b
 asic-dictionary-English.dict
@@ -1469,6 +1525,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 heorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1476,91 +1534,90 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 27.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 27.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 27.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 27.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 27.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 27.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 27.
-LaTeX Font Info:    Redeclaring math accent \check on input line 27.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 27.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 27.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 27.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 27.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 27.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 32.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 32.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 32.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 32.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 32.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 32.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 32.
+LaTeX Font Info:    Redeclaring math accent \check on input line 32.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 32.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 32.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 32.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 32.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 27.
+(Font)              `operators' in the math version `normal' on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Caladea(0)/m/n on input line 27.
+(Font)                  OT1/cmr/m/n --> TU/Caladea(0)/m/n on input line 32.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 27.
+(Font)              `operators' in the math version `bold' on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Caladea(0)/m/n on input line 27.
+(Font)                  OT1/cmr/bx/n --> TU/Caladea(0)/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Caladea(0)/m/n --> TU/Caladea(0)/m/n on input line 2
-7.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 27.
+(Font)                  TU/Caladea(0)/m/n --> TU/Caladea(0)/m/n on input line 3
+2.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  TU/Caladea(0)/m/it --> TU/Caladea(0)/m/it on input line
- 27.
+ 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/Caladea(0)/b/n --> TU/Caladea(0)/b/n on input line 2
-7.
+(Font)                  TU/Caladea(0)/b/n --> TU/Caladea(0)/b/n on input line 3
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  TU/Carlito(0)/m/n --> TU/Carlito(0)/m/n on input line 2
-7.
+(Font)                  TU/Carlito(0)/m/n --> TU/Carlito(0)/m/n on input line 3
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/m/n on input line 27.
+(Font)                  TU/lmtt/m/n --> TU/lmtt/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Caladea(0)/m/n --> TU/Caladea(0)/b/n on input line 2
-7.
+(Font)                  TU/Caladea(0)/m/n --> TU/Caladea(0)/b/n on input line 3
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/Caladea(0)/b/it --> TU/Caladea(0)/b/it on input line
- 27.
+ 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/Carlito(0)/b/n --> TU/Carlito(0)/b/n on input line 2
-7.
+(Font)                  TU/Carlito(0)/b/n --> TU/Carlito(0)/b/n on input line 3
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/b/n --> TU/lmtt/b/n on input line 27.
+(Font)                  TU/lmtt/b/n --> TU/lmtt/b/n on input line 32.
  (main.nav)
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 27.
+(Font)              scaled to size 6.0pt on input line 32.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 27.
+(Font)              scaled to size 8.0pt on input line 32.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
+Package babel Info: Main language set to 'spanish'.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 29.
+(Font)              scaled to size 14.4pt on input line 34.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 29.
+(Font)              scaled to size 14.4pt on input line 34.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 29.
-LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 29.
+(Font)              scaled to size 10.0pt on input line 34.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 29.
+(Font)              scaled to size 10.0pt on input line 34.
 
-Overfull \vbox (40.91585pt too high) detected at line 29
+Overfull \vbox (12.51585pt too high) detected at line 34
  []
 
 File: assets/UNIbackground.png Graphic file (type bmp)
 <assets/UNIbackground.png>
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 4.0pt on input line 29.
+(Font)              scaled to size 4.0pt on input line 34.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 [1
@@ -1569,40 +1626,42 @@ File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 77.
+(Font)              scaled to size 12.0pt on input line 82.
+LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 77.
+(Font)              scaled to size 8.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 77.
+(Font)              scaled to size 6.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 77.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
+(Font)              scaled to size 5.0pt on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
 
  (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
 
 
 (C:\Users\vlazo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 77.
+(Font)              scaled to size 8.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/it' will be
-(Font)              scaled to size 6.0pt on input line 77.
+(Font)              scaled to size 6.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/it' will be
-(Font)              scaled to size 5.0pt on input line 77.
+(Font)              scaled to size 5.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 77.
+(Font)              scaled to size 8.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 77.
+(Font)              scaled to size 6.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/b/n' will be
-(Font)              scaled to size 5.0pt on input line 77.
+(Font)              scaled to size 5.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 77.
+(Font)              scaled to size 9.0pt on input line 82.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 77.
+(Font)              scaled to size 9.0pt on input line 82.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 
@@ -1636,9 +1695,9 @@ File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 129.
+(Font)              scaled to size 8.0pt on input line 134.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 129.
+(Font)              scaled to size 8.0pt on input line 134.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
  [5
@@ -1647,13 +1706,13 @@ File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 168.
+(Font)              scaled to size 5.0pt on input line 173.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 168.
+(Font)              scaled to size 12.0pt on input line 173.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 168.
+(Font)              scaled to size 12.0pt on input line 173.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 168.
+(Font)              scaled to size 12.0pt on input line 173.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
  [6
@@ -1664,7 +1723,7 @@ File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 File: assets/fig1_smoothing.png Graphic file (type bmp)
 <assets/fig1_smoothing.png>
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 188.
+(Font)              scaled to size 6.0pt on input line 193.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
  [7
@@ -1675,11 +1734,11 @@ File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 File: assets/fig2_geometries.png Graphic file (type bmp)
 <assets/fig2_geometries.png>
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 204.
+(Font)              scaled to size 9.0pt on input line 209.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 204.
+(Font)              scaled to size 9.0pt on input line 209.
 LaTeX Font Info:    Font shape `TU/Caladea(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 204.
+(Font)              scaled to size 9.0pt on input line 209.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
  [8
@@ -1725,72 +1784,58 @@ File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 File: assets/fig9_rotation.png Graphic file (type bmp)
 <assets/fig9_rotation.png>
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <8> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 294.
-
-Overfull \vbox (8.77437pt too high) detected at line 294
- []
-
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 299.
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
-[13
+ [13
 
 ]
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
 []|\TU/Carlito(0)/m/n/6 DoG (Pirámide
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 314--314
-[]|\TU/Carlito(0)/m/n/6 Histograma 3D de gradi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
 []|\TU/Carlito(0)/m/n/6 Fast-Hessian (Im.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
 []|\TU/Carlito(0)/m/n/6 Respuestas wavelet de
  []
 
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 6.0pt on input line 314.
+(Font)              scaled to size 6.0pt on input line 319.
 
-Underfull \hbox (badness 3179) in paragraph at lines 314--314
+Underfull \hbox (badness 3179) in paragraph at lines 319--319
 []|\TU/Carlito(0)/m/n/6 FAST / CenSurE /
  []
 
 
-Underfull \hbox (badness 7740) in paragraph at lines 314--314
+Underfull \hbox (badness 7740) in paragraph at lines 319--319
 []|\TU/Carlito(0)/m/n/6 Comparación binaria di-
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 314--314
+Underfull \hbox (badness 1199) in paragraph at lines 319--319
 []|\TU/Carlito(0)/m/n/6 oFAST (Pirámide +
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 314--314
+Underfull \hbox (badness 2150) in paragraph at lines 319--319
 []|\TU/Carlito(0)/m/it/6 Steered BRIEF \TU/Carlito(0)/m/n/6 con pares
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
 \TU/Carlito(0)/m/n/6 (Leutenegger,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-[]|\TU/Carlito(0)/m/n/6 Patrón circular concén-
- []
-
-
-Overfull \hbox (24.4721pt too wide) in paragraph at lines 314--314
+Overfull \hbox (24.4721pt too wide) in paragraph at lines 319--319
  [][] 
  []
 
@@ -1801,13 +1846,9 @@ File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 ]
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
-
-Overfull \vbox (13.24414pt too high) detected at line 355
- []
-
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
-[15
+ [15
 
 ]
 File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
@@ -1829,11 +1870,27 @@ File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
 ]
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
-LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 5.0pt on input line 409.
+File: assets/slam.png Graphic file (type bmp)
+<assets/slam.png>
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
  [18
+
+]
+File: assets/UNIlogo_RGB.png Graphic file (type bmp)
+<assets/UNIlogo_RGB.png>
+File: assets/UNIlogo_RGB.png Graphic file (type bmp)
+<assets/UNIlogo_RGB.png>
+ [19
+
+]
+File: assets/UNIlogo_RGB.png Graphic file (type bmp)
+<assets/UNIlogo_RGB.png>
+File: assets/stereo.jpeg Graphic file (type bmp)
+<assets/stereo.jpeg>
+File: assets/UNIlogo_RGB.png Graphic file (type bmp)
+<assets/UNIlogo_RGB.png>
+ [20
 
 ]
 File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
@@ -1841,7 +1898,7 @@ File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
  (main.toc)
 File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
 <assets/UNIlogo_RGB_negative.png>
- [19
+ [21
 
 ]
 File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
@@ -1850,42 +1907,42 @@ File: assets/UNIbackground_negative.png Graphic file (type bmp)
 <assets/UNIbackground_negative.png>
 File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
 <assets/UNIlogo_RGB_negative.png>
- [20
+ [22
 
 ]
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
- [21
+ [23
 
 ]
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
 
-Overfull \vbox (7.289pt too high) detected at line 483
+Overfull \vbox (7.289pt too high) detected at line 531
  []
 
 File: assets/UNIlogo_RGB.png Graphic file (type bmp)
 <assets/UNIlogo_RGB.png>
-[22
+[24
 
 ]
 File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
 <assets/UNIlogo_RGB_negative.png>
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 486.
+(Font)              scaled to size 24.88pt on input line 534.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 486.
+(Font)              scaled to size 24.88pt on input line 534.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/sl' in size <14.4> not availabl
 e
 (Font)              Font shape `TU/Carlito(0)/m/it' tried instead on input line
- 486.
+ 534.
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 14.4pt on input line 486.
+(Font)              scaled to size 14.4pt on input line 534.
 File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
 <assets/UNIlogo_RGB_negative.png>
- [23
+ [25
 
 ]
 \tf@nav=\write6
@@ -1897,21 +1954,31 @@ File: assets/UNIlogo_RGB_negative.png Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
- (main.aux)
+ (main.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-09-09>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8DAE94272B73D8D727258CA10A1A45FC;600.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 50BE638604FDA749177E86CB940FA75C;529
+(rerunfilecheck)             After:  0C5D428877DAD0A51220DDE5223C6026;693.
  ) 
 Here is how much of TeX's memory you used:
- 28320 strings out of 402511
- 603245 string characters out of 5435977
- 1030032 words of memory out of 5000000
- 56929 multiletter control sequences out of 15000+600000
- 637688 words of font info for 131 fonts, out of 8000000 for 9000
+ 30073 strings out of 402511
+ 636519 string characters out of 5435977
+ 1072971 words of memory out of 5000000
+ 58661 multiletter control sequences out of 15000+600000
+ 637680 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,17n,132p,547b,1183s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,17n,132p,537b,1180s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (23 pages).
+Output written on main.pdf (25 pages).
