@@ -14,14 +14,17 @@
 
 \newcommand{\hrefcol}[2]{\textcolor{cyan}{\href{#1}{#2}}}
 
-\title[BRIEF (Calonder et al., ECCV 2010)]{\textbf{BRIEF: Binary Robust Independent Elementary Features}\\
-\large{MIA-301 Visión por Computadora}}
-\subtitle{Escuela de Posgrado - FIIS - UNI}
+\title[BRIEF: Binary Robust Independent Elementary Features]{\textbf{BRIEF: Binary Robust Independent Elementary Features}}
+\subtitle{MIA-301 Visión por Computadora\\ Escuela de Posgrado  FIIS - UNI}
 \course{Maestría en Inteligencia Artificial\vspace{0.2cm}}
-\author[Flores, Lazo, López, Quispe (Grupo 04)]{Andrés Flores B. \orcidlink{0009-0008-6960-0852} \\
-        Víctor Lazo P. \orcidlink{0000-0002-3293-6415} \\
-        Rubén López M. \orcidlink{0009-0004-5446-086X} \\
-        Juan Quispe H. \orcidlink{0000-0003-3957-5728}}
+\author
+    {
+        Andrés Flores B. \orcidlink{0009-0008-6960-0852} \and
+        Víctor Lazo P. \orcidlink{0000-0002-3293-6415} \and
+        Rubén López M. \orcidlink{0009-0004-5446-086X} \and
+        Juan Quispe H. \orcidlink{0000-0003-3957-5728}
+    }
+
 \date{\vspace{0.2cm}21 de octubre de 2026}
 
 \begin{document}
@@ -32,7 +35,7 @@
 % SLIDE 2: AGENDA (20 MINUTOS)
 % ==============================================================================
 \begin{frame}{Estructura de la Presentación}
-\framesubtitle{Basado en Calonder, Lepetit, Strecha \& Fua (ECCV 2010)}
+\framesubtitle{}
 \begin{columns}[T]
 \begin{column}{0.48\textwidth}
 \begin{colorblock}[black]{sintefgrey}{1. Descripción general del método}
@@ -81,7 +84,7 @@
 % ==============================================================================
 \section{Descripción general del método}
 
-\begin{chapter}[assets/UNIbackground_negative]{maincolor}{1. Method Overview}
+\begin{chapter}[assets/UNIbackground_negative]{maincolor}{1. Descripción general del método}
 \footnotesize
 \begin{itemize}
     \item Paradigma de descripción binaria directa sobre parches suavizados
@@ -167,7 +170,7 @@ Con $n_d \in \{128, 256, 512\}$ (\texttt{BRIEF-16}, \texttt{BRIEF-32}, \texttt{B
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Kernels de Pre-Suavizado Gaussiano (Sección 3.1)}
+\begin{frame}{Kernels de Pre-Suavizado Gaussiano}
 \framesubtitle{Reducción de la sensibilidad al ruido de alta frecuencia}
 \begin{columns}[T]
 \begin{column}{0.44\textwidth}
@@ -187,7 +190,7 @@ Con $n_d \in \{128, 256, 512\}$ (\texttt{BRIEF-16}, \texttt{BRIEF-32}, \texttt{B
 \end{columns}
 \end{frame}
 
-\begin{frame}{Disposición Espacial de las Pruebas Binarias (Sección 3.2)}
+\begin{frame}{Disposición Espacial de las Pruebas Binarias}
 \framesubtitle{Cinco geometrías estocásticas y deterministas de muestreo ($G_I \dots G_V$)}
 \scriptsize
 Asumiendo el origen $(0,0)^\top$ en el centro del parche de tamaño $S \times S$ ($S=31$):
