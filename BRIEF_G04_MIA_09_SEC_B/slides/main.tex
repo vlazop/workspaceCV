@@ -133,8 +133,29 @@ SURF-64 & 64 floats & 256 B \\
 \end{columns}
 \end{frame}
 
-\begin{frame}{Formulación Matemática del Método BRIEF}
-\framesubtitle{Pruebas Elementales de Intensidad y Construcción del Bitstring (Sección 3)}
+\begin{frame}{Kernels de Pre-Suavizado Gaussiano}
+\framesubtitle{Reducción de la sensibilidad al ruido de alta frecuencia}
+\begin{columns}[T]
+\begin{column}{0.44\textwidth}
+\scriptsize
+\begin{itemize}\setlength{\itemsep}{4pt}
+    \item \textbf{Interpretación diferencial:} La comparación $\mathbf{p}(\mathbf{x}) < \mathbf{p}(\mathbf{y})$ evalúa el \emph{signo de la derivada direccional} a lo largo de $\mathbf{y} - \mathbf{x}$.
+    \item Evaluar píxeles individuales sin filtrar hace que el descriptor sea muy sensible al ruido electrónico y al aliasing.
+    \item \textbf{Parámetro óptimo del paper:} Convolución previa con un kernel Gaussiano discreto de ventana $9 \times 9$ y $\sigma \in [1, 3]$ ($\sigma = 2.0$ en todos los experimentos).
+    \item En la secuencia \texttt{Wall}, el suavizado incrementa hasta $+18\%$ la tasa de reconocimiento en pares difíciles (\texttt{Wall 1|4} a \texttt{1|6}).
+\end{itemize}
+\end{column}
+\begin{column}{0.54\textwidth}
+\centering
+\includegraphics[width=0.98\textwidth]{assets/fig1_smoothing.png}
+\tiny \textbf{Fig. 1 reproducida:} Tasa de reconocimiento en \texttt{Wall} para 10 niveles de suavizado Gaussiano ($\sigma \in [0, 3.05]$, $n_d=512$, $G_{II}$).
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Explicación del Método BRIEF}
+\framesubtitle{Pruebas Elementales de Intensidad y Construcción del Bitstring}
 \scriptsize
 Sea $\mathbf{p}$ un parche de imagen de tamaño $S \times S$ centrado en un punto de interés (por defecto $S = 31$ píxeles):
 \begin{columns}[T]
@@ -172,25 +193,7 @@ Con $n_d \in \{128, 256, 512\}$ (\texttt{BRIEF-16}, \texttt{BRIEF-32}, \texttt{B
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Kernels de Pre-Suavizado Gaussiano}
-\framesubtitle{Reducción de la sensibilidad al ruido de alta frecuencia}
-\begin{columns}[T]
-\begin{column}{0.44\textwidth}
-\scriptsize
-\begin{itemize}\setlength{\itemsep}{4pt}
-    \item \textbf{Interpretación diferencial:} La comparación $\mathbf{p}(\mathbf{x}) < \mathbf{p}(\mathbf{y})$ evalúa el \emph{signo de la derivada direccional} a lo largo de $\mathbf{y} - \mathbf{x}$.
-    \item Evaluar píxeles individuales sin filtrar hace que el descriptor sea muy sensible al ruido electrónico y al aliasing.
-    \item \textbf{Parámetro óptimo del paper:} Convolución previa con un kernel Gaussiano discreto de ventana $9 \times 9$ y $\sigma \in [1, 3]$ ($\sigma = 2.0$ en todos los experimentos).
-    \item En la secuencia \texttt{Wall}, el suavizado incrementa hasta $+18\%$ la tasa de reconocimiento en pares difíciles (\texttt{Wall 1|4} a \texttt{1|6}).
-\end{itemize}
-\end{column}
-\begin{column}{0.54\textwidth}
-\centering
-\includegraphics[width=0.98\textwidth]{assets/fig1_smoothing.png}
-\tiny \textbf{Fig. 1 reproducida:} Tasa de reconocimiento en \texttt{Wall} para 10 niveles de suavizado Gaussiano ($\sigma \in [0, 3.05]$, $n_d=512$, $G_{II}$).
-\end{column}
-\end{columns}
-\end{frame}
+
 
 \begin{frame}{Disposición Espacial de las Pruebas Binarias}
 \framesubtitle{Cinco geometrías estocásticas y deterministas de muestreo ($G_I \dots G_V$)}
@@ -208,7 +211,7 @@ Asumiendo el origen $(0,0)^\top$ en el centro del parche de tamaño $S \times S$
 \includegraphics[width=0.90\textwidth]{assets/fig2_geometries.png}
 \end{frame}
 
-\begin{frame}{Evaluación de Geometrías y Distribuciones de Distancia (Secc. 3.2--3.3)}
+\begin{frame}{Evaluación de Geometrías y Distribuciones de Distancia}
 \framesubtitle{Superioridad de los diseños aleatorios ($G_I$--$G_{IV}$) y separabilidad en el espacio de Hamming}
 \begin{columns}[T]
 \begin{column}{0.45\textwidth}
@@ -238,7 +241,7 @@ Asumiendo el origen $(0,0)^\top$ en el centro del parche de tamaño $S \times S$
 % ==============================================================================
 \section{Escala e invariancia de rotación}
 
-\begin{chapter}[assets/UNIbackground_negative]{sintefdarkgreen}{2. Scale and Rotation Invariance}
+\begin{chapter}[assets/UNIbackground_negative]{sintefdarkgreen}{2. Escala e invariancia de rotación}
 \footnotesize
 \begin{itemize}
     \item Análisis de invarianza a cambios de escala y rotación en plano
@@ -249,6 +252,18 @@ Asumiendo el origen $(0,0)^\top$ en el centro del parche de tamaño $S \times S$
 
 \footlinecolor{sintefdarkgreen}
 \footlinepayoff{Grupo 04 (FIIS-UNI) $\vert$ BRIEF (Calonder et al., ECCV 2010)}
+
+\begin{frame}{Rotación en BRIEF} 
+\framesubtitle{}
+\begin{center} \includegraphics[width=1\textwidth]{BRIEF_G04_MIA_09_SEC_B/images/rotacion.png} 
+\end{center} 
+\end{frame}
+
+\begin{frame}{Escala en BRIEF} 
+\framesubtitle{}
+\begin{center} \includegraphics[width=0.75\textwidth]{BRIEF_G04_MIA_09_SEC_B/images/escala.png} 
+\end{center} 
+\end{frame}
 
 \begin{frame}{Análisis de Invarianza a Escala y Rotación en BRIEF}
 \framesubtitle{¿Es BRIEF invariante o robusto ante transformaciones geométricas?}
@@ -299,7 +314,7 @@ Asumiendo el origen $(0,0)^\top$ en el centro del parche de tamaño $S \times S$
 \end{frame}
 
 \begin{frame}{Comparación con Otros Métodos de Detección y Descripción}
-\framesubtitle{Propiedades de invarianza, representación y complejidad frente al estado del arte}
+\framesubtitle{Propiedades de invarianza, representación y complejidad}
 \centering
 \tiny
 \renewcommand{\arraystretch}{1.28}
@@ -318,46 +333,6 @@ Asumiendo el origen $(0,0)^\top$ en el centro del parche de tamaño $S \times S$
 \end{tabular}
 \end{frame}
 
-\begin{frame}{Evaluación Experimental Multi-Secuencia y Velocidad}
-\framesubtitle{Rendimiento en los 6 benchmarks y tiempos de cómputo para $N=512$ keypoints}
-\begin{columns}[T]
-\begin{column}{0.52\textwidth}
-\scriptsize
-\textbf{Comportamiento en los 6 Datasets (Fig. 6--8):}
-\begin{itemize}\setlength{\itemsep}{3pt}
-    \item \textbf{Punto de vista (\texttt{Wall}, \texttt{Fountain}):} \texttt{BRIEF-64} y \texttt{BRIEF-32} superan a \texttt{SURF} e igualan o superan a \texttt{U-SURF} con $4\times$ a $8\times$ menos memoria.
-    \item \textbf{Desenfoque (\texttt{Trees}), Compresión (\texttt{Jpg}) e Iluminación (\texttt{Light}):} \texttt{BRIEF} alcanza tasas del $90\%\text{--}100\%$, superando a \texttt{SURF} en todas las pruebas.
-    \item \textbf{Secuencia \texttt{Graffiti}:} \texttt{SURF} supera a \texttt{BRIEF} por la presencia de fuertes rotaciones en plano y grandes áreas monocromáticas donde las diferencias de intensidad son poco informativas.
-    \item \textbf{Saturación (Fig. 8):} \texttt{BRIEF} requiere solo $58, 118, 184, 214, 164$ bits en \texttt{Wall 1|2..1|6} para igualar los $2048$ bits de \texttt{U-SURF}.
-\end{itemize}
-\end{column}
-\begin{column}{0.45\textwidth}
-\begin{colorblock}[black]{sintefgrey}{Tabla de Tiempos ($N=512$ puntos, ms)}
-\tiny
-\centering
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{lcccc}
-\toprule
-\textbf{Etapa} & \textbf{B-16} & \textbf{B-32} & \textbf{B-64} & \textbf{SURF} \\
-\midrule
-\multicolumn{5}{l}{\textit{Reportado en el Paper (CPU 2.66 GHz):}} \\
-Descriptor comp. & 8.18 & 8.87 & 9.57 & 335.0 \\
-Matching (exact NN) & 2.19 & 4.35 & 8.16 & 28.3 \\
-\midrule
-\multicolumn{5}{l}{\textit{Nuestra Implementación (Python/NumPy):}} \\
-Descriptor comp. & 6.45 & 7.12 & 8.34 & 48.2 \\
-Matching (exact NN) & 1.85 & 2.10 & 2.65 & 11.4 \\
-\bottomrule
-\end{tabular}
-\end{colorblock}
-\scriptsize
-\begin{itemize}\setlength{\itemsep}{2pt}
-    \item \textbf{Speed-up de construcción:} \textbf{35$\times$ a 41$\times$} más rápido que SURF.
-    \item \textbf{Speed-up de matching:} \textbf{4$\times$ a 13$\times$} más rápido en búsqueda exacta 1-NN.
-\end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
 
 % ==============================================================================
 % SECCIÓN 3: APPLICATIONS
@@ -479,7 +454,7 @@ Matching (exact NN) & 1.85 & 2.10 & 2.65 & 11.4 \\
 \framesubtitle{Síntesis crítica de fortalezas y debilidades}
 \begin{columns}[T]
 \begin{column}{0.48\textwidth}
-\begin{colorblock}[black]{sinteflightgreen}{Ventajas (Strengths)}
+\begin{colorblock}[black]{sinteflightgreen}{Ventajas}
 \scriptsize
 \begin{enumerate}\setlength{\itemsep}{2.5pt}
     \item \textbf{Velocidad extrema de cómputo (35$\times$--41$\times$):} En la construcción del descriptor, dado que extrae el bitstring directamente mediante diferencias de intensidad sin calcular gradientes ni histogramas.
@@ -489,7 +464,7 @@ Matching (exact NN) & 1.85 & 2.10 & 2.65 & 11.4 \\
 \end{colorblock}
 \end{column}
 \begin{column}{0.48\textwidth}
-\begin{colorblock}[black]{sintefgrey}{Limitaciones (Weaknesses)}
+\begin{colorblock}[black]{sintefgrey}{Limitaciones}
 \scriptsize
 \begin{enumerate}\setlength{\itemsep}{2.5pt}
     \item \textbf{Sensibilidad al ruido:} Se hace estrictamente necesario un paso de suavizado previo de la imagen.
