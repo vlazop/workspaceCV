@@ -1,0 +1,99 @@
+---
+title: "Técnicas de Segmentación de Imágenes"
+subtitle: "Visión por Computador — Maestría en Inteligencia Artificial (MIA)"
+author:
+   name: "Víctor Lazo"
+   affiliation: "Universidad Nacional de Ingeniería — FIIS"
+date: today
+date-format: "D [de] MMMM, YYYY"
+lang: es # Traduce todo el entorno a español
+
+# ==========================================
+# CONFIGURACIÓN DEL FORMATO HTML
+# ==========================================
+format:
+  html:
+    # Apariencia y tema (soporta modo claro y oscuro dinámico)
+    theme:
+      light: flatly      # Temas elegantes: flatly, cosmo, zephyr
+      dark: darkly
+    
+    # Índice y navegación
+    toc: true
+    toc-title: "Índice de Contenido"
+    toc-location: right
+    toc-depth: 3
+    number-sections: true
+    smooth-scroll: true
+    # Presentación del código
+    code-fold: true             # Oculta el código por defecto pero permite desplegarlo
+    code-summary: "Mostrar código"
+    code-tools: true            # Añade botón general para ver/copiar todo el código
+    code-copy: true             # Botón de 'Copiar' en cada bloque
+    code-overflow: wrap         # Evita que el código largo se corte horizontalmente
+    code-line-numbers: true     # Muestra números de línea en el código
+    # Figuras y Tablas
+    fig-align: center
+    fig-dpi: 150                # Alta resolución para gráficos
+    fig-width: 4
+    fig-height: 3
+    fig-responsive: true
+    df-print: paged             # Tablas interactivas con paginación
+    # Documento autocontenido (genera un solo .html con todo integrado)
+    embed-resources: true
+
+# ==========================================
+# MOTOR DE EJECUCIÓN (PYTHON)
+# ==========================================
+jupyter: python3
+
+execute:
+  echo: true           # Muestra el código (sujeto al code-fold)
+  warning: false       # Oculta advertencias molestas de librerías (ej. deprecations)
+  message: false       # Oculta mensajes internos de paquetes
+  cache: false          # Guarda en caché resultados pesados para compilar más rápido
+---
+```{=html}
+<style>
+.cell-output-display img, .figure img {
+  max-width: 70% !important;
+  height: auto !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+```
+
+
+# Fundamentos y Criterios de Partición
+
+<!-- Este es un reporte interactivo generado con **Quarto**. -->
+
+## Fundamentación matemática
+La segmentacion de  imagenes se define formalmente como el proceso que particiona una región espacial $R$, correspondiente al dominio de la imagen $f(x,y)$, en $n$ subregiones discontinuas $R_1, R_2, \ldots, R_n$ tales que se satiface estrictamente los siguientes cinco axiomas matematicos:
+
+::: {.callout-note icon=false}
+## Axiomas Matemáticos de Partición Espacial
+
+1. **Exhaustividad:** $\bigcup_{i=1}^n R_i = R$. Todo píxel $(x, y) \in R$ pertenece a al menos una subregión.
+2. **Conectividad:** $R_i$ es una región conexa para $i = 1, 2, \dots, n$ (bajo conectividad-4 u 8).
+3. **Disyunción (Disjointness):** $R_i \cap R_j = \emptyset$ para todo $i \ne j$. Las regiones son mutuamente excluyentes.
+4. **Homogeneidad Regional:** $Q(R_i) = \text{TRUE}$ para $i = 1, 2, \dots, n$, donde $Q(R_i)$ es un predicado lógico sobre las propiedades del conjunto de píxeles en $R_i$ (ej. escala de grises, varianza de textura, color).
+5. **Diferenciabilidad de Adyacencia:** $Q(R_i \cup R_j) = \text{FALSE}$ para cualquier par de regiones adyacentes $R_i$ y $R_j$. Regiones vecinas deben ser disímiles en el sentido del predicado $Q$.
+:::
+
+A continuación se ejecuta un bloque de python:
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+plt.figure(figsize=(6, 3))
+plt.plot(x, y, label="sen(x)")
+plt.legend()
+plt.show()
+```
